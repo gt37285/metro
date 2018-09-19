@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+.contenedorModal {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    z-index: 1;
+
+    .modal {
+        width: 500px;
+        background-color: $colorBlanco;
+        position: absolute;
+        margin: 70px auto;
+        left: 0;
+        right: 0;
+        box-shadow: 2px 2px 2px 2px rgba($colorNegro, .2);
+
+        .contenedorAvatar {
+            display: block;
+            width: 100%;
+            position: relative;
+            margin: 20px auto;
+            margin-bottom: 70px;
+
+            .cerrar {
+                position: absolute;
+                cursor: pointer;
+                right: 20px;
+                font-size: 15px;
+
+                &:hover {
+                    font-size: 20px;
+                    color: $colorRojo;
+                }
+            }
+
+            .avatar {
+                width: 200px;
+                height: 200px;
+                display: block;
+                border-radius: 50%;
+                margin: 40px auto;
+            }
+        }
+
+        .contenedorCaja {
+            width: 70%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+            .check {
+                cursor: pointer;
+                font-family: $fuente4;
+                margin-bottom: 50px;
+            }
+
+            .cajas {
+                position: relative;
+
+                &::before {
+
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    height: 1px;
+                    width: 100%;
+                    background-color: $colorGris;
+                    bottom: 0;
+                    left: 0;
+                    transition: all .5s;
+                }
+
+                &::after {
+
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    height: 2px;
+                    width: 0;
+                    background-color: $colorTomatea;
+                    bottom: 0;
+                    left: 50%;
+                    transition: all .5s;
+                }
+
+                &:focus-within::after {
+                    width: 100%;
+                    left: 0;
+                }
+
+                .caja {
+                    padding: 7px;
+                    display: block;
+                    width: 100%;
+                    padding-left: 30px;
+                    margin: 30px auto;
+                    border: none;
+                    outline: none;
+
+                }
+
+                .iconCaja {
+                    color: $colorRojo;
+                    position: absolute;
+                    top: 7px;
+                    left: 2px;
+                }
+
+                .icon3 {
+                    color: $colorRojo;
+                    position: absolute;
+                    right: 2px;
+                    top: 7px;
+                    cursor: pointer;
+
+                }
+            }
+        }
+
+        .enviar {
+            width: 100%;
+            padding: 7px;
+            cursor: pointer;
+            margin-bottom: 30px;
+
+            .span {
+                position: relative;
+                font-size: 15px;
+                font-family: $fuente4;
+                color: $colorNegro;
+                transition: all .5s;
+            }
+
+            &:hover .span::after {
+                content: "\00bb";
+                position: absolute;
+                top: 0;
+                right: -10px;
+                cursor: pointer;
+            }
+
+            &:hover .span {
+                padding-right: 25px;
+                right: 0;
+            }
+
+        }
+
+        .registroLogin {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba($colorNegro, .1);
+            width: 100%;
+
+            & * {
+
+                margin: 30px auto;
+            }
+
+            .enviar {
+                display: block;
+                margin-top: auto;
+                margin-bottom: auto;
+                width: 200px;
+            }
+
+            .forgot {
+                font-family: $fuente4;
+            }
+
+
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@mixin img($ruta) {
+
+    width: 100%;
+    height: 100%;
+    background-image: url($ruta);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    clip-path: circle(83.1% at 100% 91%);
+    opacity: 0.9;
+}
+
+.contenedorSlider {
+
+    display: block;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background-color: rgba($colorNegro, .1);
+
+    .contenedorImg {
+
+        display: block;
+        width: 100%;
+        height: 600px;
+
+        & * {
+            display: none;
+        }
+
+        .cont1 {
+
+            @include img("../imagenes/slider/img1.png");
+        }
+
+        .cont2 {
+            @include img("../imagenes/slider/img2.jpg");
+        }
+
+        .cont3 {
+            @include img("../imagenes/slider/img3.jpg");
+        }
+
+    }
+
+    .contenedorIcon {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 15%;
+        z-index: 1;
+        color: rgba($colorNegro, .5);
+
+    }
+
+    .contenedorSelect {
+        display: block;
+        bottom: 60%;
+        font-size: 25px;
+        z-index: 1;
+        color: rgba($colorNegro, .5);
+
+        .select1 {
+            position: absolute;
+            left: 15px;
+            bottom: 60%;
+        }
+
+        .select2 {
+            position: absolute;
+            right: 15px;
+            bottom: 60%;
+        }
+
+    }
+
+    .icon {
+        color: $colorGris;
+    }
+
+    .icon:hover {
+        font-size: 120%;
+        color: $colorTomatea;
+        cursor: pointer;
+    }
+
+    .contenedorText {
+
+        position: absolute;
+        display: block;
+        float: left;
+        left: 10%;
+        top: 20%;
+        width: 250px;
+        box-sizing: border-box;
+
+        h2 {
+            font-family: $fuente2;
+            margin: 20px;
+        }
+
+        p {
+            font-family: $fuente5;
+        }
+    }
+
+
+    @media only screen and (max-width:868px) {
+
+        .contenedorText {
+            display: none;
+        }
+
+    }
+
+
+}

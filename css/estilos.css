@@ -1,0 +1,689 @@
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Goudy+Bookletter+1911|Kalam|Lobster|Poiret+One|Ruslan+Display");
+
+.contenedorNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    min-width: 350px;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.contenedorNav .logo {
+    width: 100px;
+}
+
+.contenedorNav .lista > li {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    list-style: none;
+    position: relative;
+    text-align: center;
+    font-size: 17px;
+    font-family: "Poiret One", cursive;
+    color: #a3671a;
+}
+
+.contenedorNav .lista > li .enlace {
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    font-family: "Poiret One", cursive;
+    color: #a3671a;
+}
+
+.contenedorNav .lista > li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff9205;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.contenedorNav .lista > li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.contenedorSlider {
+    display: block;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.contenedorSlider .contenedorImg {
+    display: block;
+    width: 100%;
+    height: 600px;
+}
+
+.contenedorSlider .contenedorImg * {
+    display: none;
+}
+
+.contenedorSlider .contenedorImg .cont1 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../imagenes/slider/img1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-clip-path: circle(83.1% at 100% 91%);
+    clip-path: circle(83.1% at 100% 91%);
+    opacity: 0.9;
+}
+
+.contenedorSlider .contenedorImg .cont2 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../imagenes/slider/img2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-clip-path: circle(83.1% at 100% 91%);
+    clip-path: circle(83.1% at 100% 91%);
+    opacity: 0.9;
+}
+
+.contenedorSlider .contenedorImg .cont3 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../imagenes/slider/img3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-clip-path: circle(83.1% at 100% 91%);
+    clip-path: circle(83.1% at 100% 91%);
+    opacity: 0.9;
+}
+
+.contenedorSlider .contenedorIcon {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 15%;
+    z-index: 1;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.contenedorSlider .contenedorSelect {
+    display: block;
+    bottom: 60%;
+    font-size: 25px;
+    z-index: 1;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.contenedorSlider .contenedorSelect .select1 {
+    position: absolute;
+    left: 15px;
+    bottom: 60%;
+}
+
+.contenedorSlider .contenedorSelect .select2 {
+    position: absolute;
+    right: 15px;
+    bottom: 60%;
+}
+
+.contenedorSlider .icon {
+    color: #939393;
+}
+
+.contenedorSlider .icon:hover {
+    font-size: 120%;
+    color: #a3671a;
+    cursor: pointer;
+}
+
+.contenedorSlider .contenedorText {
+    position: absolute;
+    display: block;
+    float: left;
+    left: 10%;
+    top: 20%;
+    width: 250px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.contenedorSlider .contenedorText h2 {
+    font-family: "Lobster", cursive;
+    margin: 20px;
+}
+
+.contenedorSlider .contenedorText p {
+    font-family: "Kalam", cursive;
+}
+
+@media only screen and (max-width: 868px) {
+    .contenedorSlider .contenedorText {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    html,
+    body {
+        min-width: 360px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .contenedorInfo2 {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .contenedorInfo2 .articulo1 {
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .contenedorBlog {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .contenedorBlog .contenedorImg {
+        margin-bottom: 50px;
+    }
+}
+
+.contenedorBlog {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 50px;
+}
+
+.contenedorBlog * {
+    margin-top: 50px;
+}
+
+.contenedorBlog .contenedorImg {
+    width: 400px;
+}
+
+.contenedorBlog .contenedorImg .imgb {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.contenedorBlog .contenedorText2 {
+    width: 500px;
+}
+
+.contenedorBlog .contenedorText2 h2 {
+    font-family: "Goudy Bookletter 1911", serif;
+    text-align: center;
+    font-size: 50px;
+}
+
+.contenedorBlog .contenedorText2 p {
+    text-align: justify;
+    font-family: "Poiret One", cursive;
+    margin: 50px auto;
+}
+
+.contenedorInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    background: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.contenedorInfo * {
+    margin-bottom: 70px;
+}
+
+.contenedorInfo .imgI {
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.contenedorInfo p {
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedorInfo .articulo {
+    width: 300px;
+    display: block;
+    margin-top: 100px;
+}
+
+.contenedorInfo2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    padding-top: 100px;
+}
+
+.contenedorInfo2 * {
+    margin-bottom: 100px;
+}
+
+.contenedorInfo2 .articulo1 {
+    width: 500px;
+}
+
+.contenedorInfo2 .articulo1 h2 {
+    font-family: "Goudy Bookletter 1911", serif;
+    text-align: center;
+    font-size: 50px;
+}
+
+.contenedorInfo2 .articulo1 p {
+    text-align: justify;
+    font-family: "Poiret One", cursive;
+    margin: 50px auto;
+}
+
+.contenedorInfo2 .articulo2 {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 500px;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.contenedorInfo2 .articulo2 * {
+    width: 100px;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    margin: auto;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    cursor: pointer;
+}
+
+.contenedorInfo2 .articulo2 .imgI1 {
+    grid-column: 1/span 1;
+    grid-row: 1/span 1;
+}
+
+.contenedorInfo2 .articulo2 .imgI2 {
+    grid-column: 3/span 1;
+    grid-row: 1/span 1;
+}
+
+.contenedorInfo2 .articulo2 .imgI3 {
+    grid-column: 3/span 1;
+    grid-row: 3/span 1;
+}
+
+.contenedorInfo2 .articulo2 .imgI4 {
+    grid-column: 1/span 1;
+    grid-row: 3/span 1;
+}
+
+.contenedorInfo2 .articulo2 .imgI5 {
+    grid-column: 2/span 1;
+    grid-row: 2/span 1;
+}
+
+.contenedorInfo2 .articulo2 .imgD {
+    width: 100px;
+    height: 100px;
+}
+
+.contenedorP {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+
+.contenedorP img {
+    display: block;
+    margin: auto;
+}
+
+@media only screen and (max-width: 430px) {
+    .contenedorP img {
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: #cccccc;
+    display: block;
+}
+
+.footer .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footer .logo {
+    width: 15%;
+}
+
+.footer .logo .logoimg {
+    width: 75px;
+}
+
+.footer .redes {
+    width: 85%;
+}
+
+.footer .redes * {
+    float: right;
+    padding: 10px;
+}
+
+.footer .redes .imgRed {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.footer .marca {
+    background-color: #cccccc;
+    font-family: "Poiret One", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+.contenedorModal {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    z-index: 1;
+}
+
+.contenedorModal .modal {
+    width: 500px;
+    background-color: #fff;
+    position: absolute;
+    margin: 70px auto;
+    left: 0;
+    right: 0;
+    -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contenedorModal .modal .contenedorAvatar {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin: 20px auto;
+    margin-bottom: 70px;
+}
+
+.contenedorModal .modal .contenedorAvatar .cerrar {
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    font-size: 15px;
+}
+
+.contenedorModal .modal .contenedorAvatar .cerrar:hover {
+    font-size: 20px;
+    color: #c10f21;
+}
+
+.contenedorModal .modal .contenedorAvatar .avatar {
+    width: 200px;
+    height: 200px;
+    display: block;
+    border-radius: 50%;
+    margin: 40px auto;
+}
+
+.contenedorModal .modal .contenedorCaja {
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedorModal .modal .contenedorCaja .check {
+    cursor: pointer;
+    font-family: "Poiret One", cursive;
+    margin-bottom: 50px;
+}
+
+.contenedorModal .modal .contenedorCaja .cajas {
+    position: relative;
+}
+
+.contenedorModal .modal .contenedorCaja .cajas::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #939393;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.contenedorModal .modal .contenedorCaja .cajas::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: #a3671a;
+    bottom: 0;
+    left: 50%;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.contenedorModal .modal .contenedorCaja .cajas:focus-within::after {
+    width: 100%;
+    left: 0;
+}
+
+.contenedorModal .modal .contenedorCaja .cajas .caja {
+    padding: 7px;
+    display: block;
+    width: 100%;
+    padding-left: 30px;
+    margin: 30px auto;
+    border: none;
+    outline: none;
+}
+
+.contenedorModal .modal .contenedorCaja .cajas .iconCaja {
+    color: #c10f21;
+    position: absolute;
+    top: 7px;
+    left: 2px;
+}
+
+.contenedorModal .modal .contenedorCaja .cajas .icon3 {
+    color: #c10f21;
+    position: absolute;
+    right: 2px;
+    top: 7px;
+    cursor: pointer;
+}
+
+.contenedorModal .modal .enviar {
+    width: 100%;
+    padding: 7px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.contenedorModal .modal .enviar .span {
+    position: relative;
+    font-size: 15px;
+    font-family: "Poiret One", cursive;
+    color: #000;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.contenedorModal .modal .enviar:hover .span::after {
+    content: "\00bb";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    cursor: pointer;
+}
+
+.contenedorModal .modal .enviar:hover .span {
+    padding-right: 25px;
+    right: 0;
+}
+
+.contenedorModal .modal .registroLogin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.contenedorModal .modal .registroLogin * {
+    margin: 30px auto;
+}
+
+.contenedorModal .modal .registroLogin .enviar {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 200px;
+}
+
+.contenedorModal .modal .registroLogin .forgot {
+    font-family: "Poiret One", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

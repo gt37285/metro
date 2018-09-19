@@ -1,0 +1,74 @@
+@media only screen and(max-width:500px) {
+
+    .lista > li {}
+
+
+}
+
+.contenedorNav {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba($colorNegro, .1);
+    min-width: 350px;
+    overflow: hidden;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+
+
+    .logo {
+        width: 100px;
+    }
+
+
+
+    .lista > li {
+        display: inline-block;
+        cursor: pointer;
+        padding: 10px;
+        list-style: none;
+        text-align: center;
+        font-size: 17px;
+        font-family: $fuente4;
+        color: $colorTomatea;
+
+        .enlace {
+            text-decoration: none;
+            text-align: center;
+            font-size: 17px;
+            font-family: $fuente4;
+            color: $colorTomatea;
+
+        }
+
+
+        position: relative;
+
+        &::after {
+
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: $colorTomateb;
+            transition: all 0.5s;
+        }
+
+        &:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+
+    }
+}
